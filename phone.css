@@ -1,0 +1,149 @@
+/* 헤더 */
+header nav{
+  width: 100%;
+  padding: 10px 15px;
+}
+.logo a img{
+  width: 70%;
+  object-fit: cover;
+}
+.gnb ul,
+nav .vol{
+  display: none;
+}
+/* 헤더 메뉴바 */
+nav .menubar{
+  width: 40px;
+  height: 40px;
+}
+.menubar a span{
+  display: block;
+  width:100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+
+/* 메인 */
+main{
+  margin-top: 70px;
+}
+
+/* 메인서브 상단 */
+.sub h3{
+  font:800 .8rem var(--mainfont) ;
+  margin-bottom: 15px;
+}
+.sub h2{
+  margin: auto;
+  width: 120px;
+}
+.sub h2 img{
+  width: 100%;
+}
+
+/* 메인서브 하단 */
+.sub .s-bottom{
+  width: 500px;
+  border: 5px solid #fff;
+  display: block;
+  margin: 30px auto;
+  position: relative;
+}
+.s-bottom img{
+  width: 100%;
+}
+.s-bottom .number{
+  width: 50px;
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  font: 800 .8rem var(--mainfont);
+  color: #fff;
+}
+.number::before{
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -2px;
+}
+.s-bottom .s-cont{
+  height: 140px;
+  padding: 20px;
+  position: relative;
+}
+.s-cont h3{
+  font:600 1.2rem var(--mainfont) ;
+  line-height: 20px;
+}
+.s-cont p{
+  font-size: 0.9rem;
+}
+.s-cont .plus{
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.9rem;
+}
+
+
+
+/* 메인 갤러리 */
+.g-list .g-item{
+  width: calc(100% / 2);
+  border-left: none;
+  padding: 0 15px;
+}
+.g-item h3{
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.g-item .item-cont{
+  font-weight:400;
+  font-size: .9rem;
+  margin-bottom: 20px;
+}
+
+
+/* 푸터 */
+footer{
+  padding:40px;
+}
+footer .f-top{
+  width: 100%;
+  display: block;
+  margin: auto;
+  position: relative;
+}
+.f-top .f-logo{
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+}
+.f-logo img{
+  width: 100%;
+}
+.f-top .f-sns{
+  width: 35%;
+  position: absolute;
+  right: 0 ;
+}
+.f-sns li{
+  width:calc(100% / 5);
+  margin-left: 10px;
+}
+.f-bottom p{
+  width: 100%;
+  line-height: 25px;
+  color: #919191;
+  margin-top: 60px;
+  font-size: .8rem;
+  font-weight: 300;
+}
+.f-bottom .copy{
+  font-weight: 500;
+  margin-top: 25px;
+}

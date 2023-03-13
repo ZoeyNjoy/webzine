@@ -1,5 +1,13 @@
 $(function(){
-  var $container = $('.g_list'),
+
+  $('nav .gnb').click(function(e){
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $('nav .gnb li').toggleClass('visible');
+  })
+
+
+  var $container = $('.g-list'),
       $loadBtn= $('.load-more'),
       $addItemCount = 6,
       $added = 0, //더보기 버튼을 클릭해서 추가된 항목수가 0가 될때 버튼을 사라지게
@@ -27,14 +35,27 @@ $(function(){
     slicedData = $allData.slice($added, $added+$addItemCount);
     $.each(slicedData, function(idx, item){
       var itemHTML =
-       '<li class="g_item"><a href="#"><p>'+ item.date +'<span>'+ item.no +'</span></p>' + 
-       '<img src="'+ item.images +'"alt="이미지"><h3>'+ item.title +'</h3><p class="item_cont">'+ item.contents +'</p><span class="plus">'+ item.more +'</span></a></li>';
+       '<li class="g-item"><a href="#"><p>'+ item.date +'<span>'+ item.no +'</span></p>' + 
+       '<img src="'+ item.images +'"alt="이미지"><h3>'+ item.title +'</h3><p class="item-cont">'+ item.contents +'</p><span class="plus">'+ item.more +'</span></a></li>';
 
         elements.push($(itemHTML).get(0));
         
     });
     $container.append(elements);
     $added += slicedData.length;
-
   }
+
+
+  $('nav .menubar').click(function(){
+    $('.snb-wrap').addClass('on')
+    $('body').addClass('scrollLock')
+    $('.snb').css({'animation':'snbslide .5s'})
+  })
+  $('.snb .m-bar').click(function(){
+    $('.snb-wrap').removeClass('on')
+    $('body').removeClass('scrollLock')
+  })
+  
+
+  
 }); // ready function

@@ -7,7 +7,9 @@
   <title>서브페이지만들기</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="./gallery.js" defer></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./tablet.css" media="all and (min-width:768px) and (max-width:1024px)">
+  <link rel="stylesheet" href="./phone.css" media="all and (max-width:768px)">
 </head>
 <body>
   <header>
@@ -25,7 +27,7 @@
           <li><a href="#">현상진맥</a></li>
           <li><a href="#">그들의 이력서</a></li>
           <li><a href="#">풍류재담</a></li>
-          <li><a href="#">연희살롱</a></li>
+          <li class="active"><a href="#">연희살롱</a></li>
         </ul>
       </div>
       <div class="menubar">
@@ -36,11 +38,86 @@
         </a>
       </div>
     </nav>
+    <div class="snb-wrap">
+      <div class="snb">
+        <a href="#" class="m-bar">
+          <span></span>
+          <span></span>
+        </a>
+        <input type="search" name="search" id="search" placeholder="검색어를 입력하세요." onfocus="this.placeholder=''" onblur="this.placeholder='검색할 단어를 입력해주세요'">
+        <ul class="sub-list">
+          <li class="list-1st">코노별 목록 바로가기</li>
+          <ul class="corner">
+            <li><a href="#">preview 추천명약</a></li>
+            <li><a href="#">trend 현상진맥</a></li>
+            <li><a href="#">people 그들의 이력서</a></li>
+            <li><a href="#">story 풍류재담</a></li>
+            <li><a href="#">playlist 연희살롱</a></li>
+          </ul>
+          <li class="list-2nd">이달의 콘텐츠 바로가기</li>
+          <ul class="month">
+            <li>
+              <a href="#">
+                <span>추천명약</span>
+                <p>가세 가세 달맞이 가세 보름달이 뜬 환한 곳으로</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>현상진맥</span>
+                <p>꿈을 리컴포지션하라 새롭게 뜨는 예술 직업</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>그들의 이력서</span>
+                <p>피리로 다시 만난 세계 삐리뿌(BBIRIBBOO)</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>풍류재담</span>
+                <p>다시, 심청가 ③ 타루비 대목 "희생? 나부터 행복해지자"</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>연희살롱</span>
+                <p>월요병을 낫게 해줄 노래 가야금 퍼포머 박선주 편</p>
+              </a>
+            </li>
+          </ul>
+        </ul>
+        <div class="snb-bottom">
+          <ul class="bottom1">
+            <li><a href="#">문화계 소식</a></li>
+            <li><a href="#">추천 영상</a></li>
+            <li><a href="#">공연 소식</a></li>
+            <li><a href="#">새 음반</a></li>
+          </ul>
+          <ul class="bottom2">
+            <li><a href="#">웹진 소개</a></li>
+            <li><a href="#">과월호</a></li>
+            <li><a href="#">공연 등록</a></li>
+            <li><a href="#">음반 등록</a></li>
+            <li><a href="#">정기구독</a></li>
+            <li><a href="#">건의・문의</a></li>
+            <li><a href="#">독자감상실록</a></li>
+          </ul>
+          <ul class="snb_sns">
+            <li><a href="#"><img src="./image/ico_nav_sns1.png" alt="이미지"></a></li>
+            <li><a href="#"><img src="./image/ico_nav_sns2.png" alt="이미지"></a></li>
+            <li><a href="#"><img src="./image/ico_nav_sns3.png" alt="이미지"></a></li>
+            <li><a href="#"><img src="./image/ico_nav_sns4.png" alt="이미지"></a></li>
+            <li><a href="#"><img src="./image/ico_nav_sns5.png" alt="이미지"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </header>
   <main>
     <div class="sub">
-      <img src="./image/Archive_salon.jpg" alt="배경화면" class="sub_bg">
-      <div class="s_top">
+      <div class="s-top">
         <h3>PLAYLIST</h3>
         <h2><img src="./image/sub_tit.png" alt="연희살롱"></h2>
         <div class="inner">
@@ -48,10 +125,10 @@
           <p>취향에 딱 맞는 띵곡을 연희살롱에서 찾아보세요.</p>
         </div>
       </div>
-      <div class="s_bottom">
+      <div class="s-bottom">
         <p class="number">2023.02</p>
         <img src="./image/55_salon.jpg" alt="박선주편">
-        <div class="s_cont">
+        <div class="s-cont">
           <h3>월요병을 낫게 해줄 노래가야금퍼포머 박선주 편</h3>
           <p>반복되는 일상을 벗어나고 싶을 때, 월요일을 산뜻하게 바꿔줄 플레이리트드!</p>
           <span class="plus">자세히 보기</span>
@@ -59,24 +136,24 @@
       </div>
     </div>
     <div class="gallery">
-      <ul class="g_list"></ul>
+      <ul class="g-list"></ul>
       <button class="load-more">더 보기</button>
     </div>
   </main>
   <footer>
-    <div class="f_top">
-      <a href="#" class="f_logo">
+    <div class="f-top">
+      <a href="#" class="f-logo">
         <img src="./image/gzd_logo.png" alt="푸터로고">
       </a>
-      <ul class="f_sns">
-        <li><a href="#"><img src="./image/ico_nav_sns1.png" alt="페이스북"></a></li>
-        <li><a href="#"><img src="./image/ico_nav_sns2.png" alt="인스타그램"></a></li>
-        <li><a href="#"><img src="./image/ico_nav_sns3.png" alt="블로그"></a></li>
-        <li><a href="#"><img src="./image/ico_nav_sns4.png" alt="유튜브"></a></li>
-        <li><a href="#"><img src="./image/ico_nav_sns5.png" alt="네이버TV"></a></li>
+      <ul class="f-sns">
+        <li><a href="#"><img src="./image/sns1.png" alt="페이스북"></a></li>
+        <li><a href="#"><img src="./image/sns2.png" alt="인스타그램"></a></li>
+        <li><a href="#"><img src="./image/sns3.png" alt="블로그"></a></li>
+        <li><a href="#"><img src="./image/sns4.png" alt="유튜브"></a></li>
+        <li><a href="#"><img src="./image/sns5.png" alt="네이버TV"></a></li>
       </ul>
     </div>
-    <div class="f_bottom">
+    <div class="f-bottom">
       <p>발행인 김삼진 | 편집부장 전국은 | 편집팀장 심재흥 | 기획 박혜주·이정하 | 아트디렉터 이슬 | 사진 김태화 | 편집실 대외협력팀 02-580-3282 | webzine@kotpa.org | 06757 서울특별시 서초구 서초동 남부순환로 2364 국악연수관 1층
       </p>
       <p class="copy">Copyright 2023 Korean Traditional Performing Arts Foundation. All Rights Reserved.</p>

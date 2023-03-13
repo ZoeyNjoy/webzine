@@ -1,0 +1,21 @@
+.gnb ul{
+  display: none;
+}
+
+nav .vol{
+  width: 150px;
+  color: #fff;
+  font: 100 1rem var(--mainfont);
+  font-size: 14px;
+}
+
+/* 메인 갤러리 */
+.g-list .g-item{
+  padding: 10px 20px;
+}
+.g-item h3{
+  font-weight: 700;
+}
+.g-item .item-cont{
+  font-weight: 400;
+}
