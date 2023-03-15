@@ -13,7 +13,7 @@ $(function(){
       $added = 0, //더보기 버튼을 클릭해서 추가된 항목수가 0가 될때 버튼을 사라지게
       $allData = [];
   
-  $.toJSON('./js/content.json', initGallery)
+  $.toJSON('./js/db.json', initGallery)
     function initGallery(data){
       $allData = data;      
       addItem();
